@@ -1,5 +1,5 @@
 const { animals } = require("./data/animals");
-
+const PORT = process.env.PORT || 3001;
 const express = require("express");
 const app = express();
 
@@ -52,6 +52,6 @@ app.get('/api/animals', (req, res) => {
 });
 
 
-app.listen(3001, () => {
-    console.log("done")
+app.listen(PORT, () => {
+    console.log(`listening on port ${PORT}`)
 })
