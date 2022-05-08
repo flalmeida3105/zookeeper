@@ -13,7 +13,8 @@ const printResults = resultArr => {
       Diet: ${diet.substring(0, 1).toUpperCase() + diet.substring(1)}<br/>
       Personality Traits: ${personalityTraits
         .map(trait => `${trait.substring(0, 1).toUpperCase() + trait.substring(1)}`)
-        .join(', ')}</p>
+        .join(', ')}
+        </p>
     </div>
   </div>
     `;
@@ -29,13 +30,12 @@ const getAnimals = (formData = {}) => {
     queryUrl += `${key}=${value}&`;
   });
 
-  console.log(queryUrl);
-
   fetch(queryUrl)
     .then(response => {
       if (!response.ok) {
-        return alert('Error: ' + response.statusText);
+        return alert(`Error: ${response.statusText}`);
       }
+      console.log(response)
       return response.json();
     })
     .then(animalData => {
@@ -76,3 +76,4 @@ const handleGetAnimalsSubmit = event => {
 $animalForm.addEventListener('submit', handleGetAnimalsSubmit);
 
 getAnimals();
+
