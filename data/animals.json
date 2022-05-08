@@ -144,6 +144,15 @@
         "hungry"
       ],
       "id": "14"
+    },
+    {
+      "name": "efrtryu",
+      "species": "ferethrjytukyi",
+      "diet": "folivore",
+      "personalityTraits": [
+        "anxious"
+      ],
+      "id": "15"
     }
   ]
 }
